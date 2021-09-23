@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 *{
     margin: 0;
     padding: 0;
@@ -6,6 +9,10 @@
 }
 body{
     background-color: #0e0e1f;
+    margin-bottom: 60px;
+}
+body::-webkit-scrollbar{
+    display: none;
 }
 .menu{
     position: fixed;
@@ -15,6 +22,8 @@ body{
     justify-content: space-between;
     align-items: center;
     height: 65px;
+    transition: background-color .3s ease;
+    z-index: 5;
 }
 .menu div{
     margin: 0 40px;
@@ -41,6 +50,8 @@ header{
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    transition: background-image .6s ease;
+    animation: slide1 ease infinite 3s;
 }
 .text01{
     margin-left: 50px;
@@ -68,7 +79,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
 }
 .all{
     background-color: black;
@@ -81,13 +92,10 @@ header{
     text-decoration: none;
     transition: width .6s ease, height .6s ease;
 }
-.all:hover{
-    height: 460px;
-}
 .div{
     width: 100%;
     height: 0px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.568);
     position: absolute;
     bottom: 0;
     display: flex;
@@ -141,4 +149,139 @@ header{
 }
 .n4:hover{
     background-image: url(../img/gif4.gif);
+}
+#load{
+    position: fixed;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 88;
+    opacity: 1;
+    transition: opacity .6s ease;
+}
+.spiner{
+    width: 5px;
+    height: 40px;
+    background-color: yellow;
+    margin: 5px;
+}
+.s1{
+    height: 15px;
+    animation: height infinite 1s alternate;
+}
+.s2{
+    height: 30px;
+    animation: height1 infinite 2s alternate;
+}
+.s3{
+    animation: height3 infinite 0.9s alternate;
+}
+.s4{
+    height: 15px;
+    animation: height2 infinite 2.5s alternate;
+}
+@keyframes height{
+    to{
+        height: 45px;
+    }
+}
+@keyframes height1{
+    to{
+        height: 15px;
+    }
+}
+@keyframes height2{
+    to{
+        height: 60px;
+    }
+}
+@keyframes height3{
+    to{
+        height: 35px;
+    }
+}
+@media (max-width:977px){
+    .menu ul{
+        display: none;
+    }
+    .menu div{
+        margin: 0;
+    }
+    .menu{
+        justify-content: center;
+    }
+    .top{
+        flex-wrap: wrap;
+        margin: 0 10px;
+        margin-bottom: 30px;
+    }
+    .text01{
+        margin-left: 10px;
+        margin: 0 10px;
+    }
+    .text01 h1{
+        font-size: 40px;
+    }
+    .text01 p{
+        font-size: 18px;
+    }
+    .all{
+        width: 100%;
+        height: 400px;
+    }
+    .cen{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .box{
+        width: 1000px;
+    }
+    .lested{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.lested{
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+.lested h1{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.cen{
+    display: flex;
+}
+.box{
+    width: 320px;
+    height: 180px;
+    background-color: rgba(0, 0, 0, 0.637);
+    margin: 5px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.box img{
+    width: 45px;
+    height: 45px;
+}
+.box:hover .escu{
+    opacity: 1;
+}
+.escu{
+    background-color: rgba(0, 0, 0, 0.699);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity .6s ease;
 }

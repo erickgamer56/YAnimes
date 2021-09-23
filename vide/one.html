@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>one punch man </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../img/Untitled-1.png" type="image/x-icon">
+</head>
+<body>
+    <div id="load">
+        <div class="spiner s1"></div>
+        <div class="spiner s2"></div>
+        <div class="spiner s3"></div>
+        <div class="spiner s4"></div>
+    </div>
+    <nav class="menu" id="menu">
+        <a href="../index.html" style="text-decoration: none;"><div><img src="../img/Untitled-1.png" style="margin-right: 10px;" width="45px" height="45px"><h1>YAnimes</h1></div></a>
+        <div>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="#">Discord</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="vid">
+        <div class="videoi">
+            <div class="video" style="background-image: url(../img/inici2.jpg);">
+                <iframe src="https://mega.nz/embed/HSIS0RJB#TmI7V29Fd5cgrlVQ7N48m5dv7n6dCazK6MNgFvuNC2o" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="h1">
+                <h3 >one punch man</h3>
+            </div>
+        </div>
+    </section>
+    <script>
+        window.addEventListener("load", function(){
+    const n1 = document.querySelectorAll("#load")
+    n1.forEach(element => {
+        element.style.opacity="0"
+    });
+    setTimeout(function(){
+        n1.forEach(element => {
+            element.style.zIndex="-33"
+        });
+    }, 500)
+})
+    </script>
+</body>
+</html>
